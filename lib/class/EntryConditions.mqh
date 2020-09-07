@@ -91,7 +91,9 @@ bool EntryConditions::movingAverageSellOrder()
       return true;
 
      }
+
    else
+
       return false;
 
   }
@@ -276,3 +278,4 @@ void EntryConditions::enterCondition()
   };
 //+------------------------------------------------------------------+
 
+//+------------------------------------------------------------------+

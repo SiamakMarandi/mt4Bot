@@ -54,11 +54,11 @@ Initializer::~Initializer()
 void Initializer::fillerIndicators(void)
   {
 
-// maFast = movingAverageIndicator(maFastPeriod,0,0);
+ maFast = movingAverageIndicator(maFastPeriod,0,0);
 //
-// maMedium = movingAverageIndicator(maMediumPeriod,0,0);
+ maMedium = movingAverageIndicator(maMediumPeriod,0,0);
 //
-//  maSlow = movingAverageIndicator(maSlowPeriod,0,0);
+  maSlow = movingAverageIndicator(maSlowPeriod,0,0);
 //
 //   maVerySlow = movingAverageIndicator(maVerySlowPeriod,0,0);
 //
