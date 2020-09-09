@@ -54,11 +54,11 @@ Initializer::~Initializer()
 void Initializer::fillerIndicators(void)
   {
 
- maFast = movingAverageIndicator(maFastPeriod,0,0);
+   maFast = movingAverageIndicator(maFastPeriod,0,0);
 //
- maMedium = movingAverageIndicator(maMediumPeriod,0,0);
+   maMedium = movingAverageIndicator(maMediumPeriod,0,0);
 //
-  maSlow = movingAverageIndicator(maSlowPeriod,0,0);
+   maSlow = movingAverageIndicator(maSlowPeriod,0,0);
 //
 //   maVerySlow = movingAverageIndicator(maVerySlowPeriod,0,0);
 //
@@ -70,7 +70,7 @@ void Initializer::fillerIndicators(void)
 //
 //   pSar =  parapolicSarIndicator(0.007,0.2,0);
 //
-  // mfi = moneyFlowIndexIndicator(14, 0);
+// mfi = moneyFlowIndexIndicator(14, 0);
 //
 //   cci = commodityChannelIndexIndicator(14, 0);
 //
@@ -80,7 +80,7 @@ void Initializer::fillerIndicators(void)
 //
 //   stochasticSignal = stochasticOscillatorSignalLine(5, 3, 3, 0);
 //
-  // macd = macdOscillatorBaseIndicatorLine(12, 26, 9, 0);
+// macd = macdOscillatorBaseIndicatorLine(12, 26, 9, 0);
 //
 //   macdSignal = macdOscillatorSignalLine(12, 26, 9, 0);
 //
@@ -111,6 +111,12 @@ void Initializer::fillerIndicators(void)
 //  zigzagVal = zigzagIndicator(0);
 //
 //   roc = roc.rocVal(0);
+
+//   boliberMain = iBands(NULL,0,20,2,0,PRICE_LOW,MODE_MAIN,0);
+//
+//   bolingerUpper = iBands(NULL,0,20,2,0,PRICE_LOW,MODE_UPPER,0);
+//
+//   bolingerLower = iBands(NULL,0,20,2,0,PRICE_LOW,MODE_LOWER,0);
 
 
   }

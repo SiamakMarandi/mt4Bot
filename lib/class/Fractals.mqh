@@ -20,13 +20,13 @@ private:
 public:
                      Fractals();
 
-   double            mUpperFractal();
+   void              mUpperFractal();
 
-   double            mLowerFractal();
+   void              mLowerFractal();
 
-   double            yUpperFractal(int X);
+   double            ySellFractal(int X);
 
-   double            yLowerFractal(int xCandle);
+   double            yBuyFractal(int xCandle);
 
                     ~Fractals();
   };
@@ -43,7 +43,7 @@ Fractals::~Fractals()
   {
   }
 //+------------------------------------------------------------------+
-double Fractals::mUpperFractal()
+void Fractals::mUpperFractal()
   {
 
 
@@ -74,6 +74,8 @@ double Fractals::mUpperFractal()
 
      }
 
+   candleFlag = j;
+
    YA =  iFractals(NULL, 0, MODE_UPPER, j);
 
    XA = 0;
@@ -85,11 +87,11 @@ double Fractals::mUpperFractal()
 
    m = (YA - YB) / (XA - XB);
 
-   return m;
+
 
   }
 //+------------------------------------------------------------------+
-double Fractals::mLowerFractal()
+void Fractals::mLowerFractal()
   {
 
    int i = 0;
@@ -105,9 +107,6 @@ double Fractals::mLowerFractal()
 
    YB =  iFractals(NULL, 0, MODE_LOWER, i);
 
-
-
-
 //  Print("i    :    ", i, "      Fractal : ", iFractals(NULL, 0, MODE_UPPER, i));
 
    j = i + 1;
@@ -118,6 +117,8 @@ double Fractals::mLowerFractal()
       j = j + 1;
 
      }
+
+   candleFlag = j;
 
    YA =  iFractals(NULL, 0, MODE_LOWER, j);
 
@@ -130,31 +131,26 @@ double Fractals::mLowerFractal()
 
    m = (YA - YB) / (XA - XB);
 
-   return m;
+
 
   }
 //+------------------------------------------------------------------+
-double Fractals::yUpperFractal(int xCandle)
+double Fractals::ySellFractal(int xCandle)
   {
 
-   X = xCandle;
 
-   double mLine = mUpperFractal();
 
-   Y = (mLine * X) + YA;
+   Y = (m * xCandle) + YA;
 
    return Y;
 
   }
 //+------------------------------------------------------------------+
-double Fractals::yLowerFractal(int xCandle)
+double Fractals::yBuyFractal(int xCandle)
   {
 
-   X = xCandle;
 
-   double mLine = mLowerFractal();
-
-   Y = (mLine * X) + YA;
+   Y = (m * xCandle) + YA;
 
    return Y;
 
